@@ -7,20 +7,11 @@
     <link rel="stylesheet" href="css/index.css" type="text/css">
     <script type="text/javascript" src="script/home.js"></script>
   </head>
-  <body class="full-heigh-grow">
+  <body class="full-height-grow">
     <div class="container">
-      <header class="main-header">
-        <a href="#" class="brand-logo"> <img src="images/logo.svg" alt="Logo" height="60px"> </a>
-        <nav class="main-nav">
-          <ul>
-            <li> <a href="#">Home</a> </li>
-            <li> <a href="#">Products</a> </li>
-            <li> <a href="#"> <?php printSVG("images/icon-search.svg"); ?> </a> </li>
-            <li> <a href="#"> <?php printSVG("images/icon-login.svg"); ?> </a> </li>
-            <li> <a href="#"> <?php printSVG("images/icon-cart.svg"); ?> </a> </li>
-          </ul>
-        </nav>
-      </header>
+      <?php
+        require "header.php";
+       ?>
 
       <section class="home-main-section">
         <div class="banner">
@@ -54,31 +45,13 @@
       </section>
     </div>
 
-    <footer>
-      <div class="call-for-action">
-        <p class="title">SIGN UP FOR JIMMY CHOO UPDATES</p>
-        <p class="subtitle">Be the first to discover our lastest collections, events and news</p>
-        <form class="collect-email" action="index.php" method="post">
-          <input class="inp" type="text" name="email" value="" placeholder="Enter your email address">
-          <span class="messages"></span>
-          <input class="btn" type="button" name="btn-signup" value="SIGN UP">
-        </form>
-      </div>
-      <div class="footer-nav">
-
-      </div>
-    </footer>
+    <?php
+      require "footer.php";
+     ?>
   </body>
 
   <script type="text/javascript">
     autoSlide();
   </script>
-
-  <?php
-    function printSVG($src) {
-      $svg_file= file_get_contents($src);
-      echo $svg_file;
-    }
-   ?>
 
 </html>
