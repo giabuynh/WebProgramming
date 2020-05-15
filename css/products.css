@@ -32,7 +32,8 @@
 }
 
 .products img {
-
+  width: 250px;
+  margin: 0 50px;
 }
 
 .products .title {
@@ -45,10 +46,22 @@
   width: 250px;
   height: 250px;
   background-color: gray;
-  margin: 0 40px;
+  margin: 0 5em;
 }
 
-@media (max-width=900px) {
+@media (max-width: 1200px) {
+  .catalogue {
+    flex-direction: row;
+  }
+  .line {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .catalogue {
+    flex-direction: column;
+  }
   .line {
     flex-direction: column;
   }
