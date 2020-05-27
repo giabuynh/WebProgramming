@@ -125,7 +125,7 @@ input[type=text]:focus {
   border-bottom: 1px solid black;
 }
 
-input[type=button] {
+input[type=button], input[type="submit"] {
   align-self: center;
   width: auto;
   padding: 20px 40px;

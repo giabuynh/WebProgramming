@@ -5,7 +5,7 @@
       <li> <a href="index.php">Home</a> </li>
       <li> <a href="products.php">Products</a> </li>
       <li> <a href="#"> <?php printSVG("images/icon-search.svg"); ?> </a> </li>
-      <li> <a href="#"> <?php printSVG("images/icon-login.svg"); ?> </a> </li>
+      <li> <a href="signin.php"> <?php printSVG("images/icon-login.svg"); ?> </a> </li>
       <li> <a href="#"> <?php printSVG("images/icon-cart.svg"); ?> </a> </li>
     </ul>
   </nav>
