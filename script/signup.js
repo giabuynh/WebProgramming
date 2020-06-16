@@ -1,0 +1,3 @@
+function checkSignUp() {
+  return true;
+}

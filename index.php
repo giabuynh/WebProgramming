@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Jimmy Choo | Luxury Shoes</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link rel="stylesheet" href="css/index.css" type="text/css">
@@ -11,6 +11,7 @@
     <div class="container">
       <?php
         require "header.php";
+        echo $_SESSION["user"];
        ?>
 
       <section class="home-main-section">

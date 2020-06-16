@@ -1,7 +1,27 @@
-.signin-main-section {
+.signin-main-section, .signup-main-section {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  /* border: 2px solid red; */
+}
+
+.signup-main-section {
+  justify-content: flex-start;
+}
+
+.main-image {
+  display: flex;
+  justify-content: center;
+  vertical-align: bottom;
+  padding: 0;
+  margin: 0;
+}
+
+.main-image img {
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: 110vh;
 }
 
 .form {
@@ -10,6 +30,12 @@
   align-items: center;
   width: 50%;
   padding: 0.75em;
+  /* border: 1px solid blue; */
+}
+
+.signup-main-section .form {
+  align-items: flex-start;
+  width: 60%;
 }
 
 .form-element {
@@ -41,7 +67,9 @@
   color: red;
 }
 
-.form input[type="text"] {
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="email"] {
   width: 70%;
   display: flex;
   align-self: flex-start;
@@ -52,11 +80,15 @@
   padding: 0.75rem;
 }
 
-.form input[type="text"]:focus {
+.form input[type="text"]:focus,
+.form input[type="password"]:focus,
+.form input[type="email"]:focus {
   background-color: #e2e2e2;
 }
 
-.form input[type="text"]::placeholder {
+.form input[type="text"]::placeholder,
+.form input[type="password"]::placeholder,
+.form input[type="email"]::placeholder {
   color: black;
   font-weight: bold;
 }
@@ -113,10 +145,15 @@
   cursor: pointer;
 }
 
-.form-signin {
-
+.dropdown-list {
+  width: 50%;
 }
 
-.form-order-status {
-
+@media(max-width: 800px) {
+  .main-image {
+    display: none;
+  }
+  .signup-main-section .form {
+    width: 100%;
+  }
 }

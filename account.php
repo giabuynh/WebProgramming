@@ -11,6 +11,7 @@
         require "header.php";
        ?>
 
+       <button type="button" name="button" value="Log-out" onclick=""></button>
 
     </div>
 

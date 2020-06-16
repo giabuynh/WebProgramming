@@ -2,18 +2,14 @@ create database JIMMYCHOO;
 -- drop database JIMMYCHOO;
 use JIMMYCHOO;
 
-create table ADMINS (
-	uname varchar(30) primary key,
-    pass varchar(30)
-);
-
-create table CUSTOMERS (
-	id char(5) primary key, -- CUS00
-    fname varchar(30) not null,
-    email varchar(40) unique not null,
+create table ACCOUNTS (
+    fname varchar(30) not null, 
+    email varchar(40) unique not null, -- use as account name
     pass varchar(20) not null,
     address varchar(100) not null,
-    phone char(10)  not null
+    phone char(10)  not null,
+    bday date,
+    ad boolean
     -- check (not regexp_like(email, '^[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$')),
     -- check (regexp_like(phone, '^0[[:digit:]]{9}'))
 );
@@ -73,7 +69,7 @@ create table STOCK(
 );
 
 create table SHOPPING_BAG (
-	cid char(5), -- customer id
+	cus char(5), -- customer
     pid char(10), -- product id
     color varchar(30), -- color
     size decimal(3,1), -- main size
@@ -89,7 +85,7 @@ create table SHOPPING_BAG (
 -------------------------------------------------
 create table BILLS(
 	id char(10) primary key, -- B000000000
-    cid char(5), -- customer id
+    cus char(5), -- customer
     billing_date date not null,
     payment_date date,
     address varchar(100) not null,
