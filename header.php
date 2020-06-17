@@ -1,7 +1,7 @@
 <?php
   session_start();
   $signin = 'signin.php';
-  if ($_SESSION["user"] != null) $signin = "account.php";
+  if ($_SESSION && $_SESSION["user"] != null) $signin = 'account.php';
  ?>
 
 <header class="main-header">

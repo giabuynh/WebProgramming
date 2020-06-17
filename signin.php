@@ -21,6 +21,8 @@
       {
         $_SESSION["user"] = $username;
         // echo "CUS";
+        $row = $res->fetch_assoc();
+        echo $row["admin"];
         header("Location: index.php");
       }
       else

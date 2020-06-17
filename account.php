@@ -1,3 +1,7 @@
+<?php
+  
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,7 +15,9 @@
         require "header.php";
        ?>
 
-       <button type="button" name="button" value="Log-out" onclick=""></button>
+      <form class="" action="account.php" method="post">
+        <input type="submit" name="btn-logout" value="Log out">
+      </form>
 
     </div>
 

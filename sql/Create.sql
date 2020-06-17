@@ -8,8 +8,8 @@ create table ACCOUNTS (
     pass varchar(20) not null,
     address varchar(100) not null,
     phone char(10)  not null,
-    bday date,
-    ad boolean
+    -- bday date, 
+    ad bool default false
     -- check (not regexp_like(email, '^[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$')),
     -- check (regexp_like(phone, '^0[[:digit:]]{9}'))
 );

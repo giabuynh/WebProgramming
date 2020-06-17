@@ -11,7 +11,7 @@
     <div class="container">
       <?php
         require "header.php";
-        echo $_SESSION["user"];
+        // echo $_SESSION["user"];
        ?>
 
       <section class="home-main-section">
