@@ -1,6 +1,6 @@
 use JIMMYCHOO;
 
-/***** PROCEDURE *****/
+/***** PROCEDURES *****/
 delimiter \\
 create procedure ADD_ACCOUNT(
 	fn varchar(30),
@@ -19,4 +19,4 @@ begin
     commit;
 end\\
 
-/***** FUNCTION *****/
+/***** FUNCTIONS *****/

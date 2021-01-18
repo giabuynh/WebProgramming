@@ -1,28 +1,28 @@
 <!-- XU LY DANG KY -->
 <?php
-  // require_once 'func/connect-db.php';
-  // if (isset($_POST["btn-register"]))
-  // {
-  //   $email = $_POST["email"];
-  //   $sql = "SELECT * FROM ACCOUNTS WHERE email = '$email'";
-  //   $res = $conn->query($sql);
-  //   if ($res->num_rows != 0)
-  //   {
-  //     echo "email da dang ky";
-  //   }
-  //   else
-  //   {
-  //     $sql = "CALL ADD_ACCOUNT(?, ?, ?, ?, ?, 0)";
-  //     $stmt = $conn->prepare($sql);
-  //     $stmt->bind_param("sssss", $fname, $email, $password, $address, $phone);
-  //     $fname = $_POST["full-name"];
-  //     $password = $_POST["password"];
-  //     $address = $_POST["address"];
-  //     $phone = $_POST["phone"];
-  //     $stmt->execute();
-  //     $stmt->close();
-  //   }
-  // }
+  require_once 'func/connect-db.php';
+  if (isset($_POST["btn-register"]))
+  {
+    $email = $_POST["email"];
+    $sql = "SELECT * FROM ACCOUNTS WHERE email = '$email'";
+    $res = $conn->query($sql);
+    if ($res->num_rows != 0)
+    {
+      echo "email da dang ky";
+    }
+    else
+    {
+      $sql = "CALL ADD_ACCOUNT(?, ?, ?, ?, ?, 0)";
+      $stmt = $conn->prepare($sql);
+      $stmt->bind_param("sssss", $fname, $email, $password, $address, $phone);
+      $fname = $_POST["full-name"];
+      $password = $_POST["password"];
+      $address = $_POST["address"];
+      $phone = $_POST["phone"];
+      $stmt->execute();
+      $stmt->close();
+    }
+  }
  ?>
 
 <!DOCTYPE html>
